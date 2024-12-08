@@ -8,7 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        main: 'var(--font-ebGaramond)',
+        sec: 'var(--font-montserrat)',
+        mono: 'var(--font-cutiveMono)'
+      },
       colors: {
+        blue: {
+          main: '#012A4A',
+          sec: '#065695'
+        },
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
