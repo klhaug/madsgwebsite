@@ -19,4 +19,6 @@ body {
   background: var(--background);
   font-family: var(--font-ebGaramond), Arial, Helvetica, sans-serif;
   font-size: large;
+  color: #011D32 ;
 }
+

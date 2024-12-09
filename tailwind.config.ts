@@ -19,7 +19,8 @@ export default {
       colors: {
         blue: {
           main: '#012A4A',
-          sec: '#065695'
+          sec: '#065695',
+          hover: '#034761'
         },
         background: "var(--background)",
         foreground: "var(--foreground)",

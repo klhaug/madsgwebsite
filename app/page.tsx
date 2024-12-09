@@ -2,6 +2,7 @@ import { getBio, getConcerts, getMerch } from "@/sanity/sanity-utils";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import ToggleButton from "@/components/toggle-button";
+import Link from "next/link";
 
 
 export default async function Home() {
@@ -12,22 +13,36 @@ export default async function Home() {
 
   return (
     <div>
-      <ToggleButton />
-      <div className="font-main bg-image"><PortableText value={bio[0].content} /></div>
-      <a href="#billetter"className="flex h-[53px] bg-blue-main text-white">Billetter</a>
-      <h2>{merch[0].title}</h2>
-      <p>{merch[0].description}</p>
-      <h3>{merch[0].price}</h3>
+        <section id="hero" className="m-auto bg-no-repeat bg-center bg-cover bg-image max-w-[1440px] h-[872px]">
+          <header>
+            <nav className="flex max-w-[1440px] justify-between px-24 py-8">
+              <Link href="/" className="font-main font-bold tracking-tighter text-2xl">Mads Gjetmundsen</Link>
+              <ul className="flex items-center gap-12">
+                <li><a href="#about" className="transition-all duration-300 ease-in-out hover:underline underline-offset-8">Om</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#store">Vinyl</a></li>
+                <li><a href="#booking" className="flex justify-center items-center h-11 px-6 bg-blue-main hover:bg-blue-hover text-white">Booking</a></li>
+              </ul>
+            </nav>
+          </header>
+        </section>
+      {/* <div>
+        <div className="font-main bg-image"><PortableText value={bio[0].content} /></div>
+        <a href="#billetter"className="flex h-[53px] bg-blue-main text-white">Billetter</a>
+        <h2>{merch[0].title}</h2>
+        <p>{merch[0].description}</p>
+        <h3>{merch[0].price}</h3>
+        {concerts.map((concert) => (
+          <div key={concert._id}>
+            <p>{concert.venue}</p>
+            <p>{concert.location}</p>
+            <p>{concert.ticketUrl}</p>
+            <p>{concert.datetime}</p>
+          </div>
+        ))}
       <Image src={merch[0].image} width={250} height ={250} alt="Man in flower field"/>
-      {concerts.map((concert) => (
-        <div key={concert._id}>
-          <p>{concert.venue}</p>
-          <p>{concert.location}</p>
-          <p>{concert.ticketUrl}</p>
-          <p>{concert.datetime}</p>
-        </div>
-      ))}
-      
+      </div> */}
+       {/* <ToggleButton /> */}
     </div>
   );
 }
