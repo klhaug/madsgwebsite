@@ -3,6 +3,7 @@ import { PortableText } from "next-sanity";
 import Image from "next/image";
 import ToggleButton from "@/components/toggle-button";
 import Link from "next/link";
+import HamburgerMenu from "@/components/hamburger-menu";
 
 
 export default async function Home() {
@@ -15,14 +16,17 @@ export default async function Home() {
     <div>
         <section id="hero" className="m-auto bg-no-repeat bg-center bg-cover bg-image max-w-[1440px] h-[872px]">
           <header>
-            <nav className="flex max-w-[1440px] justify-between px-24 py-8">
-              <Link href="/" className="font-main font-bold tracking-tighter text-2xl">Mads Gjetmundsen</Link>
-              <ul className="flex items-center gap-12">
-                <li><a href="#about" className="transition-all duration-300 ease-in-out hover:underline underline-offset-8">Om</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#store">Vinyl</a></li>
+            <nav id="desktop-nav" className="flex max-w-[1440px] justify-between px-24 py-8">
+              <Link href="/" className="flex items-center font-main font-bold tracking-tighter h-11 text-2xl">Mads Gjetmundsen</Link>
+              <ul className="md:flex items-center gap-12 hidden">
+                <li><a href="#about" className="hover:underline underline-offset-8">Om</a></li>
+                <li><a href="#contact" className="hover:underline underline-offset-8">Kontakt</a></li>
+                <li><a href="#store" className="hover:underline underline-offset-8">Vinyl</a></li>
                 <li><a href="#booking" className="flex justify-center items-center h-11 px-6 bg-blue-main hover:bg-blue-hover text-white">Booking</a></li>
               </ul>
+              <HamburgerMenu />
+            </nav>
+            <nav>
             </nav>
           </header>
         </section>

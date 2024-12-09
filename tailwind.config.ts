@@ -10,6 +10,7 @@ export default {
     extend: {
       backgroundImage: {
         image: "url('/static/bg-hero.jpg')",
+        burger: "url('/static/hamburger-bg.png')",
       },
       fontFamily: {
         main: 'var(--font-ebGaramond)',
