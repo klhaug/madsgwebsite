@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        image: "url('/static/bg-hero.jpg')",
+      },
       fontFamily: {
         main: 'var(--font-ebGaramond)',
         sec: 'var(--font-montserrat)',
