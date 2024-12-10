@@ -16,7 +16,7 @@ export default async function Home() {
     <div>
         <section id="hero" className="m-auto bg-no-repeat bg-center bg-cover bg-image max-w-[1440px] h-[872px]">
           <header>
-            <nav id="desktop-nav" className="flex max-w-[1440px] justify-between px-24 py-8">
+            <nav id="desktop-nav" className="flex max-w-[1440px] justify-between px-5 sm:px-10 md:px-24 py-8">
               <Link href="/" className="flex items-center font-main font-bold tracking-tighter h-11 text-2xl">Mads Gjetmundsen</Link>
               <ul className="md:flex items-center gap-12 hidden">
                 <li><a href="#about" className="hover:underline underline-offset-8">Om</a></li>
