@@ -29,6 +29,7 @@ export default async function Home() {
             <nav>
             </nav>
           </header>
+          <p>Keeping the streak alive</p>
         </section>
       {/* <div>
         <div className="font-main bg-image"><PortableText value={bio[0].content} /></div>
