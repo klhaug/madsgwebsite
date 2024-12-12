@@ -19,11 +19,11 @@ function toggleHamburgerNav() {
    return (
     <div className="lg:hidden">
    
-        <div id="nav-overlay" className={`absolute left-0 bg-gradient-to-t from-[#F3FAFF] to-white  top-0 w-[100%] transition-all duration-300 ease-in-out overflow-hidden ${toggleNav ? "max-h-[2000px]" : "max-h-0 "} `}>
+        <div id="nav-overlay" className={`absolute left-0 bg-gradient-to-t from-[#F3FAFF] to-white  top-0 w-[100%] transition-all duration-300 ease-in-out overflow-hidden ${toggleNav ? "max-h-[3000px]" : "max-h-0 "} `}>
          <div onClick={toggleHamburgerNav} className="flex items-center justify-end px-10 py-8 md:px-24 ">
             <Image className="hover:cursor-pointer z-50" src={"/hamburger-menu-close.svg"} height={32.5} width={32.5} alt="hamburger menu" />
         </div>
-            <nav className="flex flex-col justify-center h-[calc(100vh-96px)] items-center text-2xl">
+            <nav className="flex flex-col justify-center h-[calc(100vh-50px)] -mt-10 items-center text-2xl">
                 <a onClick={toggleHamburgerNav} href="#about" className="leading-[64px] hover:font-semibold">Om</a>
                 <a onClick={toggleHamburgerNav} href="#contact" className="leading-[64px] hover:font-semibold" >Kontakt</a>
                 <a onClick={toggleHamburgerNav} href="#vinyl" className="leading-[64px] hover:font-semibold" >Vinyl</a>

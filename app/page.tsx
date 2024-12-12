@@ -2,6 +2,7 @@ import { getBio, getConcerts, getMerch } from "@/sanity/sanity-utils";
 import Link from "next/link";
 import HamburgerMenu from "@/components/hamburger-menu";
 import { PortableText } from "next-sanity";
+import Image from "next/image";
 
 
 export default async function Home() {
@@ -12,7 +13,7 @@ export default async function Home() {
 
   return (
     <div>
-        <section id="hero" className="m-auto bg-no-repeat bg-center bg-cover bg-image max-w-[1440px] h-[800px]">
+        <section id="hero" className="m-auto bg-no-repeat bg-center bg-cover bg-image max-w-[1440px] h-[600px] md:h-[800px]">
           <header>
             <nav id="nav" className="flex max-w-[1440px] justify-between px-5 sm:px-10 md:px-24 py-8">
               <Link href="/" className="flex items-center font-main font-bold tracking-tighter h-11 text-2xl">Mads Gjetmundsen</Link>
@@ -28,8 +29,11 @@ export default async function Home() {
         </section>
         <section id="about" className="h-40 m-auto max-w-[1440px]">
           <div className="px-5 md:px-24 py-40">
-            <div>
-              <PortableText value={bio[0].content}/>
+            <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-16">
+                <div className="max-w-[510px] leading-8">
+                  <PortableText  value={bio[0].content}/>
+                </div>
+              <Image src={'/static/mads-bio-image.png'} className="min-w-[350px]" height={400} width={400} alt='headshot mads'/>
             </div>
           </div>
         </section>
