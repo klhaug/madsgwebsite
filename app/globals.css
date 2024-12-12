@@ -22,3 +22,7 @@ body {
   color: #011D32 ;
 }
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}

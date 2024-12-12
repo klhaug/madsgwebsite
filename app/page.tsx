@@ -1,9 +1,7 @@
 import { getBio, getConcerts, getMerch } from "@/sanity/sanity-utils";
-import { PortableText } from "next-sanity";
-import Image from "next/image";
-import ToggleButton from "@/components/toggle-button";
 import Link from "next/link";
 import HamburgerMenu from "@/components/hamburger-menu";
+import { PortableText } from "next-sanity";
 
 
 export default async function Home() {
@@ -14,11 +12,11 @@ export default async function Home() {
 
   return (
     <div>
-        <section id="hero" className="m-auto bg-no-repeat bg-center bg-cover bg-image max-w-[1440px] h-[872px]">
+        <section id="hero" className="m-auto bg-no-repeat bg-center bg-cover bg-image max-w-[1440px] h-[800px]">
           <header>
-            <nav id="desktop-nav" className="flex max-w-[1440px] justify-between px-5 sm:px-10 md:px-24 py-8">
+            <nav id="nav" className="flex max-w-[1440px] justify-between px-5 sm:px-10 md:px-24 py-8">
               <Link href="/" className="flex items-center font-main font-bold tracking-tighter h-11 text-2xl">Mads Gjetmundsen</Link>
-              <ul className="md:flex items-center gap-12 hidden">
+              <ul className="lg:flex items-center gap-12 hidden">
                 <li><a href="#about" className="hover:underline underline-offset-8">Om</a></li>
                 <li><a href="#contact" className="hover:underline underline-offset-8">Kontakt</a></li>
                 <li><a href="#store" className="hover:underline underline-offset-8">Vinyl</a></li>
@@ -26,10 +24,14 @@ export default async function Home() {
               </ul>
               <HamburgerMenu />
             </nav>
-            <nav>
-            </nav>
           </header>
-          <p>Keeping the streak alive</p>
+        </section>
+        <section id="about" className="h-40 m-auto max-w-[1440px]">
+          <div className="px-5 md:px-24 py-40">
+            <div>
+              <PortableText value={bio[0].content}/>
+            </div>
+          </div>
         </section>
       {/* <div>
         <div className="font-main bg-image"><PortableText value={bio[0].content} /></div>

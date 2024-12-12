@@ -8,28 +8,56 @@ export default function HamburgerMenu() {
 const [toggleNav, setToggleNav] = useState(false)
 
 function toggleHamburgerNav() {
-    return setToggleNav(!toggleNav)
+    if(document.body.classList.contains("overflow-hidden")){
+        document.body.classList.remove("overflow-hidden"); 
+    } else {
+        document.body.classList.add("overflow-hidden")
+    }
+        setToggleNav(!toggleNav);
 }
 
    return (
-    <div className="md:hidden">
-        {!toggleNav ? 
-        <div>
-            <div onClick={toggleHamburgerNav} className="flex h-11 items-center ">
-                <Image className="hover:cursor-pointer" src={"/hamburger-menu.svg"} height={16} width={32.5} alt="hamburger menu" />
-            </div>
-        </div> : null} 
-        <nav className={`bg-no-repeat bg-center bg-auto bg-burger w-screen transition-[height] duration-900ms ease-in-out flex justify-start overflow-hidden flex-col items-center text-2xl  absolute top-0 left-0 ${toggleNav ? "h-[872px]" : "h-0"}`}>
-                <div className="hover:cursor-pointer self-end px-5 sm:px-8 mr-3 mt-2 md:px-24 py-8 " onClick={toggleHamburgerNav}>
-                     <Image src={"/hamburger-menu-close.svg"} height={14} width={28.5} alt="hamburger menu" />
-                </div>
-                 <ul className="items-center gap-12 flex flex-1 justify-center flex-col">
-                    <li><a href="#about" className="hover:underline underline-offset-8">Om</a></li>
-                    <li><a href="#contact" className="hover:underline underline-offset-8">Kontakt</a></li>
-                    <li><a href="#store" className="hover:underline underline-offset-8">Vinyl</a></li>
-                    <li><a href="#booking" className="hover:underline underline-offset-8">Booking</a></li>
-                </ul>
-        </nav> 
-    </div>
-   )
+    <div className="lg:hidden">
+   
+        <div id="nav-overlay" className={`absolute left-0 bg-gradient-to-t from-[#F3FAFF] to-white  top-0 w-[100%] transition-all duration-300 ease-in-out overflow-hidden ${toggleNav ? "max-h-[2000px]" : "max-h-0 "} `}>
+         <div onClick={toggleHamburgerNav} className="flex items-center justify-end px-10 py-8 md:px-24 ">
+            <Image className="hover:cursor-pointer z-50" src={"/hamburger-menu-close.svg"} height={32.5} width={32.5} alt="hamburger menu" />
+        </div>
+            <nav className="flex flex-col justify-center h-[calc(100vh-96px)] items-center text-2xl">
+                <a onClick={toggleHamburgerNav} href="#about" className="leading-[64px] hover:font-semibold">Om</a>
+                <a onClick={toggleHamburgerNav} href="#contact" className="leading-[64px] hover:font-semibold" >Kontakt</a>
+                <a onClick={toggleHamburgerNav} href="#vinyl" className="leading-[64px] hover:font-semibold" >Vinyl</a>
+                <a onClick={toggleHamburgerNav} href="#booking" className="leading-[64px] hover:font-semibold" >Booking</a>
+            </nav>
+        </div>
+        <div onClick={toggleHamburgerNav} className={`flex h-11 items-center transition-opacity delay-[250ms] duration-0 ${toggleNav ? 'opacity-0 invisible' : 'opacity-100 visible'} `}>
+            <Image className="hover:cursor-pointer z-50" src={"/hamburger-menu.svg"} height={12} width={28} alt="hamburger menu" />
+        </div>
+</div>
+)
+   
 }
+
+
+
+// <div className="lg:hidden">
+// {!toggleNav ?
+// <div>
+//     <div onClick={toggleHamburgerNav} className="flex h-11 items-center ">
+//         <Image className="hover:cursor-pointer z-50" src={"/hamburger-menu.svg"} height={12} width={28} alt="hamburger menu" />
+//     </div>
+// </div> : null} 
+// <div>
+//     {toggleNav ? <div onClick={toggleHamburgerNav} className="flex h-11 items-center ">
+//         <Image className="hover:cursor-pointer z-50" src={"/hamburger-menu-close.svg"} height={16} width={32.5} alt="hamburger menu" />
+//     </div> : null}
+//     <div id="nav-overlay" className={`absolute left-0 bg-gradient-to-t from-[#F3FAFF] to-white  top-0 w-[100%] transition-all duration-300 ease-in-out overflow-hidden ${toggleNav ? "max-h-[2000px]" : "max-h-0 "} `}>
+//         <nav className="flex flex-col justify-center h-[100vh] items-center text-2xl">
+//             <a onClick={toggleHamburgerNav} href="#about" className="leading-[64px] hover:font-semibold">Om</a>
+//             <a onClick={toggleHamburgerNav} href="#contact" className="leading-[64px] hover:font-semibold" >Kontakt</a>
+//             <a onClick={toggleHamburgerNav} href="#vinyl" className="leading-[64px] hover:font-semibold" >Vinyl</a>
+//             <a onClick={toggleHamburgerNav} href="#booking" className="leading-[64px] hover:font-semibold" >Booking</a>
+//         </nav>
+//     </div>
+// </div>
+// </div>

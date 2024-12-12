@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ebGaramond.variable} ${montserrat.variable} ${cutiveMono.variable} antialiased`}
+        className={`${ebGaramond.variable} ${montserrat.variable} ${cutiveMono.variable} lg:overflow-auto antialiased`}
       >
         {children}
       </body>

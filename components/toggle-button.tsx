@@ -20,7 +20,7 @@ function onClick() {
         }`}
       >
         <ul className="p-4">
-          <li className="py-2 hover:bg-blue-main hover:text-white">Menu Item 1</li>
+          <li onClick={onClick} className="py-2 hover:bg-blue-main hover:text-white">Menu Item 1</li>
           <li className="py-2  hover:bg-blue-main hover:text-white">Menu Item 2</li>
           <li className="py-2  hover:bg-blue-main hover:text-white">Menu Item 3</li>
           <li className="py-2 hover:bg-blue-main hover:text-white">Menu Item 4</li>
