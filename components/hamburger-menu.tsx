@@ -25,8 +25,8 @@ function toggleHamburgerNav() {
         </div>
             <nav className="flex flex-col justify-center h-[calc(100vh-50px)] -mt-10 items-center text-2xl">
                 <a onClick={toggleHamburgerNav} href="#about" className="leading-[64px] hover:font-semibold">Om</a>
-                <a onClick={toggleHamburgerNav} href="#contact" className="leading-[64px] hover:font-semibold" >Kontakt</a>
-                <a onClick={toggleHamburgerNav} href="#vinyl" className="leading-[64px] hover:font-semibold" >Vinyl</a>
+                <a onClick={toggleHamburgerNav} href="#store" className="leading-[64px] hover:font-semibold" >Vinyl</a>
+                <a onClick={toggleHamburgerNav} href="#concerts" className="leading-[64px] hover:font-semibold" >Konserter</a>
                 <a onClick={toggleHamburgerNav} href="#booking" className="leading-[64px] hover:font-semibold" >Booking</a>
             </nav>
         </div>
