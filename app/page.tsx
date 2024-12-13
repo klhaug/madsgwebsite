@@ -48,7 +48,7 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        <section id="store" className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.12)] to-[rgba(4,152,193,0.12)] m-auto">
+        <section id="store" className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.15)] to-[rgba(4,152,193,0.12)] m-auto">
           <div className="flex flex-col px-5 py-24 md:mx-24 md:py-40 items-center gap-20">
             {merch.reverse().map((merch) => {
               const {title, price, image, description, _id, slug} = merch;
