@@ -5,13 +5,13 @@ import Link from "next/link";
 
 function MerchCard({title, description, image, price, slug}){  
     return (
-        <div className="bg-white shadow-md px-5 py-8 lg:px-20 lg:py-10 w-full max-w-[390px] lg:max-w-[1260px] flex flex-col lg:flex-row justify-center items-center gap-16">
-            <div className="md:min-w-[350px]">
+        <div className="bg-white shadow-md px-5 py-8 lg:px-10 lg:py-10 w-full max-w-[390px] lg:max-w-[1260px] flex flex-col lg:flex-row justify-center items-center gap-16">
+            <div className="lg:min-w-[300px]">
                 <Image src={image} height={350} width={350} alt={title} />
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 mr-7">
                 <div className="flex flex-col gap-4">
-                    <h2 className="text-4xl lg:text-nowrap">{title}</h2>
+                    <h2 className="text-4xl">{title}</h2>
                     <p className="leading-8 max-w-[500px]">{description}</p>
                     <h3 className="text-2xl font-sec font-medium tracking-wider">Pris: {price},-</h3>
                 </div>
