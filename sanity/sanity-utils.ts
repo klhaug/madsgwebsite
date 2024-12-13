@@ -23,7 +23,8 @@ export async function getMerch(): Promise<merch[]> {
         title,
         description,
         price,
-        "image": image.asset -> url
+        "image": image.asset -> url,
+        "slug": slug.current
         }`
     )
 }

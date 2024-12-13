@@ -1,20 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 
-function MerchCard({title, description, image, price}){  
+function MerchCard({title, description, image, price, slug}){  
     return (
-        <div className="bg-white shadow-lg px-5 py-8 max-w-[390px] lg:max-w-[1260px] flex flex-col lg:flex-row gap-8 justify-center items-center">
-            <div className="min-w-[350px]">
-                <Image src={image} height={400} width={400} alt={title} />
+        <div className="bg-white shadow-md px-5 py-8 lg:px-20 lg:py-10 w-full max-w-[390px] lg:max-w-[1260px] flex flex-col lg:flex-row justify-center items-center gap-16">
+            <div className="md:min-w-[350px]">
+                <Image src={image} height={350} width={350} alt={title} />
             </div>
             <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-4">
-                    <h2 className="text-3xl">{title}</h2>
-                    <h3 className="text-xl font-sec font-medium">Pris: {price},-</h3>
-                    <p className="leading-8">{description}</p>
+                    <h2 className="text-4xl lg:text-nowrap">{title}</h2>
+                    <p className="leading-8 max-w-[500px]">{description}</p>
+                    <h3 className="text-2xl font-sec font-medium tracking-wider">Pris: {price},-</h3>
                 </div>
-                <button className="bg-blue-main flex items-center gap-3 lg:max-w-[176px] justify-center text-white px-6 w-full h-11 font-sec hover:bg-blue-hover"><Image src={"/shopping_cart.svg"} width={20} height={20} alt="shopping cart svg" />Kjøp nå</button>
+                <Link href={`/merch/${slug}`} className="bg-blue-main flex items-center gap-3 lg:max-w-[176px] justify-center text-white px-6 w-full h-11 font-sec hover:bg-blue-hover"><Image src={"/shopping_cart.svg"} width={20} height={20} alt="shopping cart svg" />Kjøp nå</Link>
             </div>
         </div>
     )

@@ -11,6 +11,7 @@ export default async function Home() {
   const bio = await getBio();
   const merch = await getMerch();
   const concerts = await getConcerts();
+  console.log(merch)
 
   return (
     <div>
@@ -47,17 +48,16 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        <section id="store" className="store-section  bg-gradient-to-r from-[rgba(2,71,91,0.04)] via-transparent to-[rgba(4,151,193,0.06)] m-auto">
-          <div className="flex flex-col mx-24 py-40 items-center">
-            {merch.map((merch) => {
-              const {title, price, image, description, _id} = merch;
+        <section id="store" className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.12)] to-[rgba(4,152,193,0.12)] m-auto">
+          <div className="flex flex-col px-5 py-24 md:mx-24 md:py-40 items-center gap-20">
+            {merch.reverse().map((merch) => {
+              const {title, price, image, description, _id, slug} = merch;
               return (
-                <MerchCard key={_id} title={title} price={price} image={image} description ={description}/>
+                <MerchCard key={_id} title={title} price={price} image={image} description ={description} slug={slug}/>
               )
             })}
           </div>
         </section>
-
       {/* <div>
         <h2>{merch[0].title}</h2>
         <p>{merch[0].description}</p>

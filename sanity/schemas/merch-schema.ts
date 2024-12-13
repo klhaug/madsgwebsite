@@ -9,6 +9,14 @@ const merch = {
             type: 'string'
         },
         {
+            name: 'slug',
+            title: "Slug",
+            type: 'slug',
+            options: {
+                source: 'title'
+            }
+        },
+        {
             name: 'description',
             title: 'Description',
             type: 'text'
