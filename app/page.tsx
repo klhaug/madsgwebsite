@@ -21,7 +21,7 @@ export default async function Home() {
               <ul className="lg:flex items-center gap-12 hidden">
                 <li><a href="#about" className="hover:underline underline-offset-8">Om</a></li>
                 <li><a href="#store" className="hover:underline underline-offset-8">Vinyl</a></li>
-                <li><a href="#contact" className="hover:underline underline-offset-8">Kontakt</a></li>
+                <li><a href="#concerts" className="hover:underline underline-offset-8">Konserter</a></li>
                 <li><a href="#booking" className="flex justify-center items-center h-11 px-6 bg-blue-main hover:bg-blue-hover text-white">Booking</a></li>
               </ul>
               <HamburgerMenu />
@@ -47,8 +47,8 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        <section id="store" className="store-section h-[1080px]  bg-gradient-to-r from-[rgba(2,71,91,0.04)] via-transparent to-[rgba(4,151,193,0.06)] m-auto">
-          <div className="flex flex-col items-center">
+        <section id="store" className="store-section  bg-gradient-to-r from-[rgba(2,71,91,0.04)] via-transparent to-[rgba(4,151,193,0.06)] m-auto">
+          <div className="flex flex-col mx-24 py-40 items-center">
             {merch.map((merch) => {
               const {title, price, image, description, _id} = merch;
               return (
@@ -57,6 +57,7 @@ export default async function Home() {
             })}
           </div>
         </section>
+
       {/* <div>
         <h2>{merch[0].title}</h2>
         <p>{merch[0].description}</p>
