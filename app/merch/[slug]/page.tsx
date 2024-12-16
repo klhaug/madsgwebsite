@@ -1,4 +1,5 @@
 import { getMerch } from "@/sanity/sanity-utils";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function MerchPage({params}: {params: Promise<{slug: string}>}) {
@@ -10,12 +11,16 @@ export default async function MerchPage({params}: {params: Promise<{slug: string
     console.log(correctMerch)
 
     return(
-        <div className="mx-auto h-[1080px]">
-            <div className="flex">
-                <div>{correctMerch[0].title} </div>
-                <div>
-                    <Link className="bg-blue-main text-white px-8 py-4" href={"/"} >Tilbake</Link>
-                </div>
+        <div className="m-auto max-w-[1728px] h-[600px] md:h-[800px]">
+            <div>
+                <div className="flex justify-center h-screen items-center max-w-[1260px] gap-8">
+                    <Image src={correctMerch[0].image} alt={correctMerch[0].title} width={250} height={250} />
+                    <div className="flex flex-col">
+                        <h1 className="font-sec text-5xl font-regular">Takk for at du ønsker å kjøpe vinyl!</h1>
+                        <p className="font-sec">Betalingsløsningen min er dessverre ikke tilgjengelig enda, så ta kontakt på<b> mads.gjetmundsen@gmail.com</b> eller <b>+46 902 35 356</b> så finner vi en løsning!</p>
+                        <Link className="flex justify-center items-center h-11 px-6 bg-blue-main hover:bg-blue-hover text-white" href={"/"} >Tilbake</Link>
+                    </div>
+            </div>
             </div>
         </div>
     )
