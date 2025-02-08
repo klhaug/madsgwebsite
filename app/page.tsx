@@ -4,6 +4,7 @@ import HamburgerMenu from "@/components/hamburger-menu";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import MerchCard from "@/components/merch-card";
+import ConcertCard from "@/components/concert-card-component";
 
 
 export default async function Home() {
@@ -57,6 +58,27 @@ export default async function Home() {
               )
             })}
           </div>
+        </section>
+        <section id="concerts" className="m-auto max-w-[1440px]">
+            <div className="px-5 py-24 md:px-24 lg:py-40">
+              <h2 className="text-[64px]">Konserter</h2>
+              <hr/>
+              <div className="table w-full">
+                <div className="table-header-group">
+                <div className="table-row">
+                    <div className="table-cell text-left ">Tidspunkt</div>
+                    <div className="table-cell text-left ">Sted</div>
+                    <div className="table-cell text-right ">Billetter</div>
+                </div>
+                </div>
+                {concerts.map((concert) =>{
+                  const {_id, _createdAt, venue, location, ticketUrl, datetime} = concert;
+                  return(
+                    <ConcertCard _id={_id} createdAt={_createdAt} venue={venue} location={location} ticketUrl={ticketUrl} datetime={datetime}  />
+                  )
+                })}
+              </div>
+            </div>
         </section>
       {/* <div>
         <h2>{merch[0].title}</h2>

@@ -21,7 +21,7 @@ const concerts = {
         {
             name: 'datetime',
             title: 'Date & Time',
-            type: 'datetime'
+            type: 'datetime',
         }
     ]
 }

@@ -30,7 +30,7 @@ export async function getMerch(): Promise<merch[]> {
 }
 export async function getConcerts(): Promise<concerts[]> {
     return createClient(clientCreated).fetch(
-        groq`*[_type == 'concerts']{ 
+        groq`*[_type == 'concerts' && dateTime(datetime) >= dateTime(now())]| order(datetime asc) { 
         _id,
         _createdAt,
         venue,
