@@ -5,6 +5,8 @@ import { PortableText } from "next-sanity";
 import Image from "next/image";
 import MerchCard from "@/components/merch-card";
 import ConcertCard from "@/components/concert-card-component";
+import ConcertCardMobile from "@/components/concert-card-mobile-component";
+import MerchCardMobile from "@/components/merch-card-mobile";
 
 
 export default async function Home() {
@@ -50,33 +52,42 @@ export default async function Home() {
           </div>
         </section>
         <section id="store" className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.15)] to-[rgba(4,152,193,0.12)] m-auto">
-          <div className="flex flex-col px-5 py-24 md:mx-24 md:py-40 items-center gap-20">
-            {merch.reverse().map((merch) => {
+          <div className="hidden lg:flex flex-col px-5 py-24 md:mx-24 md:py-40 items-center gap-20">
+            {merch.reverse().map((merch, index) => {
               const {title, price, image, description, _id, slug} = merch;
               return (
-                <MerchCard key={_id} title={title} price={price} image={image} description ={description} slug={slug}/>
+                <MerchCard key={_id} title={title} indexNumber={index} price={price} image={image} description ={description} slug={slug}/>
+              )
+            })}
+          </div>
+          <div className="flex lg:hidden flex-col px-5 py-24 md:mx-24 md:py-40 items-center gap-20">
+            {merch.reverse().map((merch, index) => {
+              const {title, price, image, description, _id, slug} = merch;
+              return (
+                <MerchCardMobile key={_id} title={title} indexNumber={index} price={price} image={image} description ={description} slug={slug}/>
               )
             })}
           </div>
         </section>
         <section id="concerts" className="m-auto max-w-[1440px]">
             <div className="px-5 py-24 md:px-24 lg:py-40">
-              <h2 className="text-[64px]">Konserter</h2>
+              <h2 className="text-[40px] text-center md:text-[64px] md:text-left">Konserter</h2>
               <hr/>
-              <div className="table w-full">
-                <div className="table-header-group">
-                <div className="table-row">
-                    <div className="table-cell text-left ">Tidspunkt</div>
-                    <div className="table-cell text-left ">Sted</div>
-                    <div className="table-cell text-right ">Billetter</div>
-                </div>
-                </div>
-                {concerts.map((concert) =>{
+              <div className="hidden lg:flex flex-col py-8">
+                {concerts.length > 0 ? concerts.map((concert) =>{
                   const {_id, _createdAt, venue, location, ticketUrl, datetime} = concert;
                   return(
-                    <ConcertCard _id={_id} createdAt={_createdAt} venue={venue} location={location} ticketUrl={ticketUrl} datetime={datetime}  />
+                    <ConcertCard key={_id} _id={_id} createdAt={_createdAt} venue={venue} location={location} ticketUrl={ticketUrl} datetime={datetime} />
                   )
-                })}
+                }): <p>Det er ingen kommende konserter for øyeblikket.</p>}
+              </div>
+              <div className="md:hidden flex flex-col gap-12 py-11">
+                {concerts.length > 0 ? concerts.map((concert) =>{
+                  const {_id, _createdAt, venue, location, ticketUrl, datetime} = concert;
+                  return(
+                    <ConcertCardMobile key={_id} _id={_id} createdAt={_createdAt} venue={venue} location={location} ticketUrl={ticketUrl} datetime={datetime}  />
+                  )
+                }) : <p className="text-center">Det er ingen kommende konserter for øyeblikket.</p>}
               </div>
             </div>
         </section>

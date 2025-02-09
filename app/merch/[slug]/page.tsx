@@ -20,7 +20,7 @@ export default async function MerchPage({params}: {params: Promise<{slug: string
                     <div className="flex flex-col gap-4 justify-center max-w-[715px]">
                         <h1 className="font-sec text-4xl font-regular">Takk for at du ønsker å kjøpe vinyl!</h1>
                         <p className="font-sec leading-8 tracking-wide font-regular">Betalingsløsningen min er dessverre ikke tilgjengelig enda, så ta kontakt på<b> mads.gjetmundsen@gmail.com</b> eller <b>+46 902 35 356</b> så finner vi en løsning!</p>
-                        <Link className="flex md:max-w-[175px] justify-center items-center h-11 px-6 bg-blue-main hover:bg-blue-hover text-white" href={"/"}> ⬅ Tilbake</Link>
+                        <Link className="flex md:max-w-[175px] justify-center items-center h-11 px-6 font-sec bg-blue-main hover:bg-blue-hover text-white" href={"/"}> ⬅ Tilbake</Link>
                     </div>
             </div>
             </div>
