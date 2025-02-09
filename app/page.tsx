@@ -7,6 +7,7 @@ import MerchCard from "@/components/merch-card";
 import ConcertCard from "@/components/concert-card-component";
 import ConcertCardMobile from "@/components/concert-card-mobile-component";
 import MerchCardMobile from "@/components/merch-card-mobile";
+import { ContactForm } from "@/components/contact-form";
 
 
 export default async function Home() {
@@ -26,12 +27,13 @@ export default async function Home() {
                 <li><a href="#about" className="hover:underline underline-offset-8">Om</a></li>
                 <li><a href="#store" className="hover:underline underline-offset-8">Vinyl</a></li>
                 <li><a href="#concerts" className="hover:underline underline-offset-8">Konserter</a></li>
-                <li><a href="#booking" className="flex justify-center items-center h-11 px-6 bg-blue-main hover:bg-blue-hover text-white">Booking</a></li>
+                <li><a href="#contact" className="flex justify-center items-center h-11 px-6 bg-blue-main hover:bg-blue-hover text-white">Booking</a></li>
               </ul>
               <HamburgerMenu />
             </nav>
           </header>
         </section>
+{/* About */}
         <section id="about" className="about-section m-auto max-w-[1440px]">
           <div className="px-5 py-24 md:px-24 lg:py-40">
             <h1 className="hidden">Om Mads Gjetmundsen</h1>
@@ -51,6 +53,7 @@ export default async function Home() {
             </div>
           </div>
         </section>
+{/* Store */}
         <section id="store" className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.15)] to-[rgba(4,152,193,0.12)] m-auto">
           <div className="hidden lg:flex flex-col px-5 py-24 md:mx-24 md:py-40 items-center gap-20">
             {merch.reverse().map((merch, index) => {
@@ -69,6 +72,7 @@ export default async function Home() {
             })}
           </div>
         </section>
+{/* Concerts */}
         <section id="concerts" className="m-auto max-w-[1440px]">
             <div className="px-5 py-24 md:px-24 lg:py-40">
               <h2 className="text-[40px] text-center md:text-[64px] md:text-left">Konserter</h2>
@@ -91,21 +95,16 @@ export default async function Home() {
               </div>
             </div>
         </section>
-      {/* <div>
-        <h2>{merch[0].title}</h2>
-        <p>{merch[0].description}</p>
-        <h3>{merch[0].price}</h3>
-        {concerts.map((concert) => (
-          <div key={concert._id}>
-            <p>{concert.venue}</p>
-            <p>{concert.location}</p>
-            <p>{concert.ticketUrl}</p>
-            <p>{concert.datetime}</p>
-          </div>
-        ))}
-      <Image src={merch[0].image} width={250} height ={250} alt="Man in flower field"/>
-      </div> */}
-       {/* <ToggleButton /> */}
+{/* Contact         */}
+        <section id="contact" className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.15)] to-[rgba(4,152,193,0.12)] m-auto">
+          <div className="px-5 flex flex-col justify-center items-center gap-6 py-24 md:px-24 lg:py-40">
+            <div>
+              <h2 className="text-[40px] text-center md:text-[64px]">Booking</h2>
+              <p className="text-center">Ønsker du å booke meg til en spillejobb? Ta kontakt!</p>
+            </div>
+            <ContactForm />
+            </div>
+        </section>
     </div>
   );
 }
