@@ -59,7 +59,7 @@ export function ContactForm() {
               </fieldset>
             </form>
             : <div className="flex flex-col max-w-[500px] gap-6 p-6 bg-white">
-              <p>Takk for din henvendelse!</p>
+              <p className="text-center">Takk for din henvendelse!</p>
               <button onClick={resetSubmitState} className="bg-blue-main flex items-center gap-3 justify-center text-white px-6 w-full h-11 font-sec hover:bg-blue-hover">Send ny henvendelse</button>
             </div>}
     </>

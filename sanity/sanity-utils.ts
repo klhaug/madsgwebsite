@@ -28,6 +28,20 @@ export async function getMerch(): Promise<merch[]> {
         }`
     )
 }
+export async function getSingleMerch(slug: string): Promise<merch[]> {
+    return createClient(clientCreated).fetch(
+        groq`*[_type == 'merch' && slug.current == $slug]{ 
+        _id,
+        _createdAt,
+        title,
+        description,
+        price,
+        "image": image.asset -> url,
+        "slug": slug.current
+        }`,
+        {slug}
+    )
+}
 export async function getConcerts(): Promise<concerts[]> {
     return createClient(clientCreated).fetch(
         groq`*[_type == 'concerts' && dateTime(datetime) >= dateTime(now())]| order(datetime asc) { 

@@ -15,7 +15,7 @@ export default async function Home() {
   const bio = await getBio();
   const merch = await getMerch();
   const concerts = await getConcerts();
-  console.log(merch)
+  // console.log(merch)
 
   return (
     <div>
@@ -73,9 +73,9 @@ export default async function Home() {
           </div>
         </section>
 {/* Concerts */}
-        <section id="concerts" className="m-auto max-w-[1440px]">
+        <section className="m-auto max-w-[1440px]">
             <div className="px-5 py-24 md:px-24 lg:py-40">
-              <h2 className="text-[40px] text-center md:text-[64px] md:text-left">Konserter</h2>
+              <h2 id="concerts" className="text-[40px] text-center md:text-[64px] md:text-left">Konserter</h2>
               <hr/>
               <div className="hidden lg:flex flex-col py-8">
                 {concerts.length > 0 ? concerts.map((concert) =>{
@@ -96,7 +96,7 @@ export default async function Home() {
             </div>
         </section>
 {/* Contact         */}
-        <section id="contact" className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.15)] to-[rgba(4,152,193,0.12)] m-auto">
+        <section id="contact" className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.25)] to-[rgba(4,152,193,0.02)] m-auto">
           <div className="px-5 flex flex-col justify-center items-center gap-6 py-24 md:px-24 lg:py-40">
             <div>
               <h2 className="text-[40px] text-center md:text-[64px]">Booking</h2>

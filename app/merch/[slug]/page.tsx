@@ -1,14 +1,10 @@
-import { getMerch } from "@/sanity/sanity-utils";
+import { getSingleMerch } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function MerchPage({params}: {params: Promise<{slug: string}>}) {
-    const {slug} = await params;
-    console.log(slug)
-
-    const merch = await getMerch();
-    const correctMerch = merch.filter((merch) => merch.slug === slug)
-    console.log(correctMerch)
+export default async function MerchPage({params}) {
+    const slug = params.slug;
+    const correctMerch = await getSingleMerch(slug);
 
     return(
         <div className="m-auto">
