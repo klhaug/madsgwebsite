@@ -64,7 +64,7 @@ export default async function Home() {
             })}
           </div>
           <div className="flex lg:hidden flex-col px-5 py-24 md:mx-24 md:py-40 items-center gap-20">
-            {merch.reverse().map((merch, index) => {
+            {merch.map((merch, index) => {
               const {title, price, image, description, _id, slug} = merch;
               return (
                 <MerchCardMobile key={_id} title={title} indexNumber={index} price={price} image={image} description ={description} slug={slug}/>
@@ -96,15 +96,19 @@ export default async function Home() {
             </div>
         </section>
 {/* Contact         */}
-        <section id="contact" className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.25)] to-[rgba(4,152,193,0.02)] m-auto">
+        <section className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.25)] to-[rgba(4,152,193,0.02)] m-auto">
           <div className="px-5 flex flex-col justify-center items-center gap-6 py-24 md:px-24 lg:py-40">
             <div>
-              <h2 className="text-[40px] text-center md:text-[64px]">Booking</h2>
+              <h2 id="contact" className="text-[40px] text-center md:text-[64px]">Booking</h2>
               <p className="text-center">Ønsker du å booke meg til en spillejobb? Ta kontakt!</p>
             </div>
             <ContactForm />
             </div>
         </section>
+{/* Footer */}
+        <footer>
+
+        </footer>
     </div>
   );
 }

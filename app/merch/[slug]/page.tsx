@@ -2,14 +2,15 @@ import { getSingleMerch } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function MerchPage({params}) {
+export default async function MerchPage(props) {
+    const params = await props.params;
     const slug = params.slug;
     const correctMerch = await getSingleMerch(slug);
 
     return(
         <div className="m-auto">
-            <div className=" max-w-[1728px] h-[600px] md:h-[800px] mx-24 flex  justify-center items-center">
-                <div className="max-w-[1300px] flex flex-wrap gap-8 items-center md:flex-nowrap" >
+            <div className="md:mx-24 my-4 mx-4 flex h-screen justify-center items-center">
+                <div className="max-w-[1300px] flex flex-wrap gap-8 justify-center items-center md:flex-nowrap" >
                     <div className="md:min-w-[300px]">
                         <Image src={correctMerch[0].image} alt={correctMerch[0].title} width={350} height={350} />
                     </div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export function ContactForm() {
 
-  const [submitState, setSubmitState] = useState(false);
+  const [submitState, setSubmitState] = useState(true);
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -35,11 +35,11 @@ export function ContactForm() {
 
   return (
     <>
-     {submitState ? <form onSubmit={handleSubmit}>
+     {submitState ? <form className="w-full md:w-[70%] lg:w-[50%]" onSubmit={handleSubmit}>
               <fieldset className="flex gap-4  flex-col border p-8 bg-white">
                 <div className="flex flex-col gap-1">
                   <label htmlFor="name" className="font-sec">Navn:</label>
-                  <input id="name" required name="name" type="text" className="border p-1 font-sec w-[440px]"></input>
+                  <input id="name" required name="name" type="text" className="border p-1 font-sec"></input>
                 </div>
                 <div className="flex flex-col gap-1">
                   <label htmlFor="email"  className="font-sec">E-post:</label>

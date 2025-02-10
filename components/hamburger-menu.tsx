@@ -27,7 +27,7 @@ function toggleHamburgerNav() {
                 <a onClick={toggleHamburgerNav} href="#about" className="leading-[64px] hover:font-semibold">Om</a>
                 <a onClick={toggleHamburgerNav} href="#store" className="leading-[64px] hover:font-semibold" >Vinyl</a>
                 <a onClick={toggleHamburgerNav} href="#concerts" className="leading-[64px] hover:font-semibold" >Konserter</a>
-                <a onClick={toggleHamburgerNav} href="#booking" className="leading-[64px] hover:font-semibold" >Booking</a>
+                <a onClick={toggleHamburgerNav} href="#contact" className="leading-[64px] hover:font-semibold" >Booking</a>
             </nav>
         </div>
         <div onClick={toggleHamburgerNav} className={`flex h-11 items-center transition-opacity delay-[250ms] duration-0 ${toggleNav ? 'opacity-0 invisible' : 'opacity-100 visible'} `}>
@@ -37,27 +37,3 @@ function toggleHamburgerNav() {
 )
    
 }
-
-
-
-// <div className="lg:hidden">
-// {!toggleNav ?
-// <div>
-//     <div onClick={toggleHamburgerNav} className="flex h-11 items-center ">
-//         <Image className="hover:cursor-pointer z-50" src={"/hamburger-menu.svg"} height={12} width={28} alt="hamburger menu" />
-//     </div>
-// </div> : null} 
-// <div>
-//     {toggleNav ? <div onClick={toggleHamburgerNav} className="flex h-11 items-center ">
-//         <Image className="hover:cursor-pointer z-50" src={"/hamburger-menu-close.svg"} height={16} width={32.5} alt="hamburger menu" />
-//     </div> : null}
-//     <div id="nav-overlay" className={`absolute left-0 bg-gradient-to-t from-[#F3FAFF] to-white  top-0 w-[100%] transition-all duration-300 ease-in-out overflow-hidden ${toggleNav ? "max-h-[2000px]" : "max-h-0 "} `}>
-//         <nav className="flex flex-col justify-center h-[100vh] items-center text-2xl">
-//             <a onClick={toggleHamburgerNav} href="#about" className="leading-[64px] hover:font-semibold">Om</a>
-//             <a onClick={toggleHamburgerNav} href="#contact" className="leading-[64px] hover:font-semibold" >Kontakt</a>
-//             <a onClick={toggleHamburgerNav} href="#vinyl" className="leading-[64px] hover:font-semibold" >Vinyl</a>
-//             <a onClick={toggleHamburgerNav} href="#booking" className="leading-[64px] hover:font-semibold" >Booking</a>
-//         </nav>
-//     </div>
-// </div>
-// </div>
