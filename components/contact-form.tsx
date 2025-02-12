@@ -35,7 +35,7 @@ export function ContactForm() {
 
   return (
     <>
-     {submitState ? <form className="w-full md:w-[70%] lg:w-[50%]" onSubmit={handleSubmit}>
+     {submitState ? <form className="w-full md:w-[600px]" onSubmit={handleSubmit}>
               <fieldset className="flex gap-4  flex-col border p-8 bg-white">
                 <div className="flex flex-col gap-1">
                   <label htmlFor="name" className="font-sec">Navn:</label>

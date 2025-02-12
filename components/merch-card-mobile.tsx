@@ -5,9 +5,9 @@ import Link from "next/link";
 
 function MerchCardMobile({title, description, image, price, slug,}){  
     return (
-        <div className="bg-white px-5 py-8 lg:px-10 lg:py-10 w-full max-w-[390px] lg:max-w-[1260px] flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16">
-             <div className="lg:min-w-[300px]">
-                <Image src={image} height={350} width={350} alt={title} />
+        <div className="bg-white px-5 py-8 lg:px-10 lg:py-10 w-full   flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16">
+             <div>
+                <Image src={image} height={400 } width={400} alt={title} />
                 
             </div> 
             <div className="flex flex-col gap-6 mr-7">
