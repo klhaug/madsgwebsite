@@ -54,7 +54,7 @@ export default async function Home() {
         </section>
 {/* Store */}
 <section id="store" className="store-section bg-gradient-to-r from-[rgba(179,222,234,0.15)] to-[rgba(4,152,193,0.12)] flex justify-center">
-  <div className="max-w-[1440px] mx-auto py-6 px-5">
+  <div className="max-w-[1440px] mx-auto py-5 px-5">
     <h2 className="text-[40px] px-5 pt-12 text-center md:text-[64px] md:text-left">Vinyl</h2>
     <hr className="max-w-[1440px] mx-auto"/>
     
@@ -69,7 +69,7 @@ export default async function Home() {
     </div>
 
     {/* Mobile Layout */}
-    <div className="flex lg:hidden flex-col px-5 py-12 items-center gap-12">
+    <div className="flex lg:hidden flex-col  py-12 items-center gap-12">
       {merch.map((merch) => {
         const {title, price, image, description, _id, slug} = merch;
         return (
@@ -114,7 +114,7 @@ export default async function Home() {
         </section>
 {/* Footer */}
         <footer className="bg-blue-main">
-            <div className="m-auto max-w-[1440px] px-24 py-12">
+            <div className="m-auto max-w-[1440px] px-5 md:px-24 py-12">
               <div className="flex flex-row justify-between items-center w-full">
                 <div className="flex flex-col gap-6 w-full">
                   <h2 className="text-white flex items-center font-main font-bold tracking-tighter h-11 text-3xl">Mads Gjetmundsen</h2>

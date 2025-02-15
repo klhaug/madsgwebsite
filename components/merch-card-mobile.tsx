@@ -17,7 +17,7 @@ function MerchCardMobile({title, description, image, price, slug,}:MerchCardMobi
                 <Image src={image} height={400 } width={400} alt={title} />
                 
             </div> 
-            <div className="flex flex-col gap-6 mr-7">
+            <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-4">
                     <h2 className="text-4xl">{title}</h2>
                     <p className="leading-8 max-w-[500px]">{description}</p>
