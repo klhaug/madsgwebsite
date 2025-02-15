@@ -34,7 +34,7 @@ export default async function Home() {
         </section>
 {/* About */}
         <section id="about" className="about-section m-auto max-w-[1440px]">
-          <div className="px-4 py-12 md:px-24">
+          <div className="px-4 py-24 md:px-24">
             <h1 className="hidden">Om Mads Gjetmundsen</h1>
             <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-16">
                 <div className="flex flex-col md:gap-4">
@@ -53,28 +53,32 @@ export default async function Home() {
           </div>
         </section>
 {/* Store */}
-        <section id="store" className="store-section  bg-gradient-to-r from-[rgba(179,222,234,0.15)] to-[rgba(4,152,193,0.12)] m-auto ">
-          <div className="max-w-[1440px]">
-            <h2 className="text-[40px] md:mx-24 xl:mx-44 px-5 pt-12 text-center md:text-[64px] md:text-left">Vinyl</h2>
-            <hr className="max-w-[1440px]"/>
-            <div className="hidden lg:flex flex-col px-5 py-12 md:mx-24 xl:mx-44 items-center gap-20">
-              {merch.reverse().map((merch, index) => {
-                const {title, price, image, description, _id, slug} = merch;
-                return (
-                  <MerchCard key={_id} title={title} indexNumber={index} price={price} image={image} description ={description} slug={slug}/>
-                )
-              })}
-            </div>
-            <div className="flex lg:hidden flex-col px-5 py-12 md:mx-24 md:py-12 items-center gap-12">
-              {merch.map((merch, index) => {
-                const {title, price, image, description, _id, slug} = merch;
-                return (
-                  <MerchCardMobile key={_id} title={title} indexNumber={index} price={price} image={image} description ={description} slug={slug}/>
-                )
-              })}
-            </div>
-          </div>
-        </section>
+<section id="store" className="store-section bg-gradient-to-r from-[rgba(179,222,234,0.15)] to-[rgba(4,152,193,0.12)] flex justify-center">
+  <div className="max-w-[1440px] mx-auto py-6 px-5">
+    <h2 className="text-[40px] px-5 pt-12 text-center md:text-[64px] md:text-left">Vinyl</h2>
+    <hr className="max-w-[1440px] mx-auto"/>
+    
+    {/* Desktop Layout */}
+    <div className="hidden lg:flex flex-col px-5 py-12 items-center gap-20">
+      {merch.reverse().map((merch, index) => {
+        const {title, price, image, description, _id, slug} = merch;
+        return (
+          <MerchCard key={_id} title={title} indexNumber={index} price={price} image={image} description ={description} slug={slug}/>
+        )
+      })}
+    </div>
+
+    {/* Mobile Layout */}
+    <div className="flex lg:hidden flex-col px-5 py-12 items-center gap-12">
+      {merch.map((merch) => {
+        const {title, price, image, description, _id, slug} = merch;
+        return (
+          <MerchCardMobile key={_id} title={title} price={price} image={image} description ={description} slug={slug}/>
+        )
+      })}
+    </div>
+  </div>
+</section>
 {/* Concerts */}
         <section className="m-auto max-w-[1440px]">
             <div className="px-5 py-12 md:px-44">
@@ -82,17 +86,17 @@ export default async function Home() {
               <hr/>
               <div className="hidden lg:flex flex-col py-8">
                 {concerts.length > 0 ? concerts.map((concert) =>{
-                  const {_id, _createdAt, venue, location, ticketUrl, datetime} = concert;
+                  const {_id, venue, location, ticketUrl, datetime} = concert;
                   return(
-                    <ConcertCard key={_id} _id={_id} createdAt={_createdAt} venue={venue} location={location} ticketUrl={ticketUrl} datetime={datetime} />
+                    <ConcertCard key={_id} venue={venue} location={location} ticketUrl={ticketUrl} datetime={datetime} />
                   )
                 }): <p>Det er ingen kommende konserter for øyeblikket.</p>}
               </div>
               <div className="lg:hidden flex flex-col gap-12 py-11">
                 {concerts.length > 0 ? concerts.map((concert) =>{
-                  const {_id, _createdAt, venue, location, ticketUrl, datetime} = concert;
+                  const {_id, venue, location, ticketUrl, datetime} = concert;
                   return(
-                    <ConcertCardMobile key={_id} _id={_id} createdAt={_createdAt} venue={venue} location={location} ticketUrl={ticketUrl} datetime={datetime}  />
+                    <ConcertCardMobile key={_id} venue={venue} location={location} ticketUrl={ticketUrl} datetime={datetime}  />
                   )
                 }) : <p className="text-center">Det er ingen kommende konserter for øyeblikket.</p>}
               </div>

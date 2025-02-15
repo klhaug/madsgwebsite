@@ -2,9 +2,12 @@ import { getSingleMerch } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function MerchPage(props) {
-    const params = await props.params;
-    const slug = params.slug;
+export default async function MerchPage({
+    params,
+  }: {
+    params: Promise<{ slug: string }>
+  }) {
+    const slug = (await params).slug
     const correctMerch = await getSingleMerch(slug);
 
     return(

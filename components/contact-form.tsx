@@ -6,23 +6,25 @@ export function ContactForm() {
 
   const [submitState, setSubmitState] = useState(true);
 
-    async function handleSubmit(e) {
+    async function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
+      setSubmitState(!submitState);
         e.preventDefault();
-        setSubmitState(!submitState);
+        const form = e.target as HTMLFormElement; // Explicitly cast to HTMLFormElement
+
+        const formData = {
+          access_key: "f9401c4c-5bce-4ddb-b411-5109d802e289",
+          name: (form.elements.namedItem("name") as HTMLInputElement)?.value || "",
+          email: (form.elements.namedItem("email") as HTMLInputElement)?.value || "",
+          message: (form.elements.namedItem("message") as HTMLTextAreaElement)?.value || "",
+          personsvernerklaering: (form.elements.namedItem("personsvernerklaering") as HTMLInputElement)?.value || "",
+        };
+      
         const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-            body: JSON.stringify({
-                access_key: "f9401c4c-5bce-4ddb-b411-5109d802e289",
-                name: e.target.name.value,
-                email: e.target.email.value,
-                message: e.target.message.value,
-                personsvernerklaering: e.target.personsvernerklaering.value
-            }),
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
         });
+        
         const result = await response.json();
         if (result.success) {
             console.log(result);

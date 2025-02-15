@@ -1,6 +1,12 @@
 import React from 'react'
+type ConcertCardPropsMobile = {
+  venue: string;
+  location: string;
+  datetime: string; // Consider using Date if handling actual Date objects
+  ticketUrl: string;
+};
 
-export default function ConcertCardMobile({_id, createdAt, venue, location, datetime, ticketUrl}) {
+export default function ConcertCardMobile({venue, location, datetime, ticketUrl}:ConcertCardPropsMobile) {
   
   const timeStamps = new Date(datetime)
   
@@ -22,7 +28,7 @@ export default function ConcertCardMobile({_id, createdAt, venue, location, date
   
 
   return (
-    <div key={_id} className=' py-4'>
+    <div className=' py-4'>
       <div  className='grid grid-cols-[0.75fr_1.5fr] gap-7 '>
               <div className='flex flex-col justify-center items-center col-span-1 mr-2 border-r border-r-black'>
                 <h3 className='font-sec font-semibold text-xl tracking-wide min-w-[85px]'>{date}. {months[month].substring(0,3)}</h3>

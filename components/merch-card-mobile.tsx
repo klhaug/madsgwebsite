@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
+type MerchCardMobileProps = {
+    title: string;
+    description: string;
+    image: string; // Consider using Date if handling actual Date objects
+    price: string;
+    slug: string;
+  };
 
 
-function MerchCardMobile({title, description, image, price, slug,}){  
+function MerchCardMobile({title, description, image, price, slug,}:MerchCardMobileProps){  
     return (
         <div className="bg-white px-5 py-8 lg:px-10 lg:py-10 w-full   flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16">
              <div>

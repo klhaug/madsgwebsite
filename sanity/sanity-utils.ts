@@ -3,6 +3,7 @@ import clientCreated from "./config/client";
 import { bio } from "@/types/bio";
 import { merch } from "@/types/merch";
 import { concerts } from "@/types/concerts";
+import { MerchCardMobileProps } from "@/types/merch-card-mobile";
 
 
 export async function getBio(): Promise<bio[]> {
@@ -28,7 +29,7 @@ export async function getMerch(): Promise<merch[]> {
         }`
     )
 }
-export async function getSingleMerch(slug: string): Promise<merch[]> {
+export async function getSingleMerch(slug: string): Promise<MerchCardMobileProps[]> {
     return createClient(clientCreated).fetch(
         groq`*[_type == 'merch' && slug.current == $slug]{ 
         _id,

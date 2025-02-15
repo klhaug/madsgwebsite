@@ -1,9 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
+type MerchCardProps = {
+    title: string;
+    description: string;
+    image: string; // Consider using Date if handling actual Date objects
+    price: string;
+    slug: string;
+    indexNumber:number;
+  };
 
 
-function MerchCard({title, description, image, price, slug, indexNumber}){  
+
+function MerchCard({title, description, image, price, slug, indexNumber}:MerchCardProps){  
     return (
         <div className="bg-white px-5 py-8 lg:px-10 lg:py-10 w-full max-w-[390px] lg:max-w-[1260px] flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16">
             {indexNumber === 0 || indexNumber % 2 === 0 ? <div className="lg:min-w-[300px]">

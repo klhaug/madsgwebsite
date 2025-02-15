@@ -1,6 +1,13 @@
 import React from 'react'
 
-export default function ConcertCard({_id, createdAt, venue, location, datetime, ticketUrl}) {
+type ConcertCardProps = {
+  venue: string;
+  location: string;
+  datetime: string; // Consider using Date if handling actual Date objects
+  ticketUrl: string;
+};
+
+export default function ConcertCard({venue, location, datetime, ticketUrl}: ConcertCardProps) {
   
   const timeStamps = new Date(datetime)
   
@@ -22,7 +29,7 @@ export default function ConcertCard({_id, createdAt, venue, location, datetime, 
   
 
   return (
-    <div key={_id} className='border-b py-8
+    <div className='border-b py-8
     '>
       <div  className='grid grid-cols-[0.5fr_1fr_2fr] auto-cols-min '>
             <div className='flex flex-col justify-between col-span-1 mr-2'>
