@@ -18,10 +18,10 @@ export default async function Home() {
 
   return (
     <div>
-        <section id="hero" className="m-auto bg-no-repeat  bg-cover bg-image bg-[center_center] max-w-[3840px] xl:bg-[position:center_60%] h-[600px] xl:h-[700px] 2xl:h-[900px] ">
+        <section id="hero" className="m-auto bg-no-repeat  bg-cover bg-image bg-[center_center] max-w-[3840px] xl:bg-[position:center_60%] h-[600px] xl:h-[725px] 2xl:h-[900px] ">
           <header className="flex justify-center w-full">
               <nav id="nav" className="flex max-w-[1728px] w-full justify-between px-5 sm:px-10 md:px-24 py-8">
-                <Link href="/" className="flex items-center font-main font-bold tracking-tighter h-11 text-2xl">Mads Gjetmundsen</Link>
+                <Link href="/" className="flex items-center font-main font-bold tracking-tighter h-11 text-2xl md:text-3xl">Mads Gjetmundsen</Link>
                 <ul className="lg:flex items-center gap-12 hidden">
                   <li><a href="#about" className="hover:underline underline-offset-8">Om</a></li>
                   <li><a href="#store" className="hover:underline underline-offset-8">Vinyl</a></li>
@@ -45,11 +45,12 @@ export default async function Home() {
                     <PortableText  value={bio[1].content}/>
                   </div>
                 </div>
-              <Image src={'/static/mads-bio-image.png'} className="w-full sm:max-w-[400px]" height={400} width={400} alt='headshot mads'/>
+              <Image src={'/static/Mads.17-Copyright.Jan.Tore.Eriksen.jpg'} className="w-full sm:max-w-[400px]" height={400} width={400} alt='headshot mads'/>
               <div className="max-w-[510px] lg:hidden leading-8">
                     <PortableText  value={bio[1].content}/>
                   </div>
             </div>
+           
           </div>
         </section>
 {/* Store */}
@@ -77,6 +78,7 @@ export default async function Home() {
         )
       })}
     </div>
+
   </div>
 </section>
 {/* Concerts */}
@@ -107,9 +109,15 @@ export default async function Home() {
           <div className="px-5 flex flex-col justify-center items-center gap-6 py-12 md:px-24 ">
             <div>
               <h2 id="contact" className="text-[40px] text-center md:text-[64px]">Booking</h2>
-              <p className="text-center">Ønsker du å booke meg til en spillejobb? Ta kontakt!</p>
+              <p className="text-center">Ønsker du å booke meg? Ta kontakt!</p>
             </div>
             <ContactForm />
+            </div>
+        </section>
+        <section className="store-section m-auto">
+          <div className="px-5 flex flex-col justify-center items-center gap-6 py-24 md:px-24 ">
+            <h2 className="text-[40px] text-center md:text-[64px]">Ta en lytt</h2>
+          <iframe className="bg-white" src="https://open.spotify.com/embed/artist/6u80MBa8I5ZmeeWHtWadGK?utm_source=generator&theme=0" width="100%" height="400"  allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </section>
 {/* Footer */}
@@ -124,7 +132,7 @@ export default async function Home() {
                         <div className="flex flex-row gap-1 justify-start">
                           <Image src={"/static/call_24dp_FDFDFD_FILL0_wght400_GRAD0_opsz24.svg"}  className="" height={24} width={24} alt="email icon" />
                         </div>
-                        <p className="text-[#fdfdfd] text-left">+ 47 123 45 123</p>
+                        <p className="text-[#fdfdfd] text-left">+ 47 902 35 356</p>
                       </div>
                       <div className="flex flex-row gap-1">
                         <div className="flex flex-row gap-1 justify-start">
@@ -136,7 +144,7 @@ export default async function Home() {
                         <div className="flex flex-row gap-1 justify-start">
                           <Image src={"/static/mail_24dp_FDFDFD_FILL0_wght400_GRAD0_opsz24.svg"}  className="" height={24} width={24} alt="email icon" />
                         </div>
-                        <p className="text-[#fdfdfd]">mads.gjetmundsen@gmail.com</p>
+                        <p className="text-[#fdfdfd]">booking@madsgjetmundsen.no</p>
                     </div>
                     </div>
                     <div className="flex flex-col gap-1">
