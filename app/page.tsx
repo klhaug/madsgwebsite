@@ -115,9 +115,9 @@ export default async function Home() {
             </div>
         </section>
         <section className="store-section m-auto">
-          <div className="px-5 flex flex-col justify-center items-center gap-6 py-24 md:px-24 ">
+          <div className="px-5 max-w-[1440px] flex flex-col justify-center items-center gap-6 py-24 md:px-24 ">
             <h2 className="text-[40px] text-center md:text-[64px]">Ta en lytt</h2>
-          <iframe className="bg-white" src="https://open.spotify.com/embed/artist/6u80MBa8I5ZmeeWHtWadGK?utm_source=generator&theme=0" width="100%" height="400"  allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe className="" src="https://open.spotify.com/embed/artist/6u80MBa8I5ZmeeWHtWadGK?utm_source=generator&theme=0" width="100%" height="400"  allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </section>
 {/* Footer */}
