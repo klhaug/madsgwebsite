@@ -18,7 +18,7 @@ export default async function Home() {
 
   return (
     <div>
-      
+
         <section id="hero" className="m-auto bg-no-repeat  bg-cover bg-image bg-[center_center] max-w-[3840px] xl:bg-[position:center_60%] h-[600px] xl:h-[725px] 2xl:h-[900px] ">
           <header className="flex justify-center w-full">
               <nav id="nav" className="flex max-w-[1728px] w-full justify-between px-5 sm:px-10 md:px-24 py-8">
@@ -118,7 +118,7 @@ export default async function Home() {
         <section className="store-section m-auto max-w-[1440px]">
           <div className="px-5  flex flex-col justify-center items-center gap-6 py-24 md:px-24 ">
             <h2 className="text-[40px] text-center md:text-[64px]">Ta en lytt</h2>
-          <iframe className="" src="https://open.spotify.com/embed/artist/6u80MBa8I5ZmeeWHtWadGK?utm_source=generator&theme=0" width="100%" height="400"  allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe className="" title="spotifyEmbed"src="https://open.spotify.com/embed/artist/6u80MBa8I5ZmeeWHtWadGK?utm_source=generator&theme=0" width="100%" height="400"  allowFullScreen={false} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </section>
 {/* Footer */}

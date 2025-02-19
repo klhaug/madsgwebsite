@@ -52,7 +52,7 @@ export function ContactForm() {
                   <textarea id="message" required name="message" maxLength={500} className="border p-1 font-sec h-24"></textarea>
                 </div>
                 <div className="flex flex-row gap-1">
-                  <input id="personsvernerklaering" name="personsvernerklaering" type="checkbox" required className="border p-1 font-sec"></input>
+                  <input id="personvernserklaering" name="personvernserklaering" type="checkbox" required className="border p-1 font-sec"></input>
                   <label htmlFor="personvernserklaering" className="font-sec text-sm">Jeg samtykker til at min informasjon blir lagret</label>
                 </div>
                 <div className="flex flex-col gap-1">
