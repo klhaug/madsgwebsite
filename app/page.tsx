@@ -45,7 +45,7 @@ export default async function Home() {
                     <PortableText  value={bio[1].content}/>
                   </div>
                 </div>
-              <Image src={'/static/Mads.17-Copyright.Jan.Tore.Eriksen.jpg'} className="w-full sm:max-w-[400px]" height={400} width={400} alt='headshot mads'/>
+              <Image src={'/static/madsherocompressed.webp'} className="w-full sm:max-w-[400px]" height={400} width={400} alt='headshot mads'/>
               <div className="max-w-[510px] lg:hidden leading-8">
                     <PortableText  value={bio[1].content}/>
                   </div>

@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        image: "url('/static/bg-hero.jpg')",
+        image: "url('/static/bg-hero-min-66.webp')",
         burger: "url('/static/hamburger-bg.png')",
       },
       fontFamily: {
