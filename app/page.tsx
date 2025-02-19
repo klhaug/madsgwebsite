@@ -61,9 +61,9 @@ export default async function Home() {
     {/* Desktop Layout */}
     <div className="hidden lg:flex flex-col px-5 py-12 items-center gap-20">
       {merch.reverse().map((merch, index) => {
-        const {title, price, image, description, _id, slug} = merch;
+        const {title, price, image, description, _id, storeUrl} = merch;
         return (
-          <MerchCard key={_id} title={title} indexNumber={index} price={price} image={image} description ={description} slug={slug}/>
+          <MerchCard key={_id} storeUrl={storeUrl} title={title} indexNumber={index} price={price} image={image} description ={description}/>
         )
       })}
     </div>
@@ -71,9 +71,9 @@ export default async function Home() {
     {/* Mobile Layout */}
     <div className="flex lg:hidden flex-col  py-12 items-center gap-12">
       {merch.map((merch) => {
-        const {title, price, image, description, _id, slug} = merch;
+        const {title, price, image, description, _id, storeUrl} = merch;
         return (
-          <MerchCardMobile key={_id} title={title} price={price} image={image} description ={description} slug={slug}/>
+          <MerchCardMobile key={_id} title={title} price={price} storeUrl={storeUrl} image={image} description ={description}/>
         )
       })}
     </div>
@@ -140,9 +140,9 @@ export default async function Home() {
                     </div>
                     </div>
                     <div className="flex flex-col gap-1">
-                      <a href="https://facebook.com" target="blank" className="text-[#fdfdfd] hover:underline">Facebook</a>
-                      <a href="https://instagram.com" target="blank" className="text-[#fdfdfd] hover:underline">Instagram</a>
-                      <a href="https://youtube.com" target="blank" className="text-[#fdfdfd] hover:underline">YouTube</a>
+                      <a href="https://www.facebook.com/Mads.Gjetmundsen.artist/" target="blank" className="text-[#fdfdfd] hover:underline">Facebook</a>
+                      <a href="https://instagram.com/madsgjet" target="blank" className="text-[#fdfdfd] hover:underline">Instagram</a>
+                      <a href="https://www.youtube.com/@madsgjet" target="blank" className="text-[#fdfdfd] hover:underline">YouTube</a>
                   </div>
                   </div>
                   <div className="flex flex-col md:flex-row justify-between">

@@ -27,6 +27,11 @@ const merch = {
             type: 'string'
         },
         {
+            name: "storeUrl",
+            title: "Nettbutikk-Link",
+            type: 'string'
+        },
+        {
             name: 'image',
             title: 'Image',
             type: 'image',
@@ -42,7 +47,7 @@ const merch = {
                     type: 'string'
                 }
             ]
-        }
+        },
     ]
 }
 

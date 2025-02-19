@@ -5,5 +5,6 @@ export type merch = {
     slug: string,
     description: string,
     price: string,
-    image: string
+    image: string,
+    storeUrl: string
 }
