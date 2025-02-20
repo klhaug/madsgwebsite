@@ -31,7 +31,7 @@ export default function ConcertCard({venue, location, datetime, ticketUrl}: Conc
   return (
     <div className='border-b py-8
     '>
-      <div  className='grid grid-cols-[0.5fr_1fr_2fr] auto-cols-min '>
+      <div  className='grid grid-cols-[0.5fr_2.5fr_1fr] auto-cols-min '>
             <div className='flex flex-col justify-between col-span-1 mr-2'>
               <h3 className='font-sec font-semibold text-xl tracking-wide min-w-[85px]'>{date}. {months[month].substring(0,3)}</h3>
               <p>{weekDays[day].toLowerCase().substring(0,3)} - {hours}:{minutes}</p>
