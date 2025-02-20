@@ -83,8 +83,8 @@ export default async function Home() {
   </div>
 </section>
 {/* Concerts */}
-        <section className="m-auto max-w-[1440px]">
-            <div className="px-5 py-12 md:px-44">
+        <section className="m-auto max-w-[1440px] ">
+            <div className="px-5 py-12 md:px-24 ">
               <h2 id="concerts" className="text-[40px] text-center md:text-[64px] md:text-left">Konserter</h2>
               <hr/>
               <div className="hidden lg:flex flex-col py-8">
