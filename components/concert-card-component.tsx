@@ -10,21 +10,15 @@ type ConcertCardProps = {
 export default function ConcertCard({venue, location, datetime, ticketUrl}: ConcertCardProps) {
   
   const timeStamps = new Date(datetime)
-  
-  const month = timeStamps.getMonth();
-  const date = timeStamps.getDate();
-  const day = timeStamps.getDay();
-  const hours = timeStamps.getHours()
-  const minutes = datetime.substring(14,16)
 
-  const months = [
-    "Januar", "Februar", "Mars", "April", "Mai", "Juni", 
-    "Juli", "August", "September", "Oktober", "November", "Desember"
-  ];
+  const month = timeStamps.toLocaleString('no-NO', { timeZone: 'Europe/Oslo', month: 'short' })
+  const date = timeStamps.toLocaleString('no-NO', { timeZone: 'Europe/Oslo', day: 'numeric' })
+  const day = timeStamps.toLocaleString('no-NO', { timeZone: 'Europe/Oslo', weekday: 'short' })
+  const hours = timeStamps.toLocaleString('no-NO', { timeZone: 'Europe/Oslo', hour: '2-digit' })
+  const minutes = timeStamps.toLocaleString('no-NO', { timeZone: 'Europe/Oslo', minute: '2-digit' }).padStart(2, '0');
 
-  const weekDays = [
-    "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag","Lørdag","Søndag"
-  ]
+
+
   
   
 
@@ -33,8 +27,8 @@ export default function ConcertCard({venue, location, datetime, ticketUrl}: Conc
     '>
       <div  className='grid grid-cols-[0.5fr_2.5fr_1fr] auto-cols-min '>
             <div className='flex flex-col justify-between col-span-1 mr-2'>
-              <h3 className='font-sec font-semibold text-xl tracking-wide min-w-[85px]'>{date}. {months[month].substring(0,3)}</h3>
-              <p>{weekDays[day].toLowerCase().substring(0,3)} - {hours}:{minutes}</p>
+              <h3 className='font-sec font-semibold text-xl tracking-wide min-w-[85px]'>{date} {month}</h3>
+              <p>{day} - {hours}:{minutes}</p>
             </div>
             <div className='flex flex-col justify-between '>
               <h3 className='font-sec font-semibold text-xl tracking-wider'>{venue}</h3>
