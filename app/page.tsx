@@ -8,6 +8,8 @@ import ConcertCard from "@/components/concert-card-component";
 import ConcertCardMobile from "@/components/concert-card-mobile-component";
 import MerchCardMobile from "@/components/merch-card-mobile";
 import { ContactForm } from "@/components/contact-form";
+import { Suspense } from "react";
+import { ImageSkeleton } from "./ui/skeletons";
 
 
 export default async function Home() {
@@ -46,7 +48,9 @@ export default async function Home() {
                     <PortableText  value={bio[1].content}/>
                   </div>
                 </div>
-              <Image src={'/static/madsherocompressed.webp'} className="w-full sm:max-w-[400px]" height={400} width={400} alt='headshot mads'/>
+              <Suspense fallback={<ImageSkeleton />}>
+                <Image src={'/static/madsherocompressed.webp'} className="w-full sm:max-w-[400px]" height={400} width={400} alt='headshot mads'/>
+              </Suspense>
               <div className="max-w-[510px] lg:hidden leading-8">
                     <PortableText  value={bio[1].content}/>
                   </div>
