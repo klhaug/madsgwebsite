@@ -160,7 +160,7 @@ export default async function Home() {
                   </div>
                   <div className="flex flex-col md:flex-row justify-between">
                     <div className="flex flex-row gap-1 justify-start">
-                      <Image src={"/static/copyright_24dp_FDFDFD_FILL0_wght400_GRAD0_opsz24.svg"} placeholder="blur" blurDataURL={"/static/mads-bio-image.png"} className="" height={24} width={24} alt="email icon" />
+                      <Image src={"/static/copyright_24dp_FDFDFD_FILL0_wght400_GRAD0_opsz24.svg"} placeholder="blur" blurDataURL={"/static/Mads.17-Copyright.Jan.Tore.Eriksen-min.jpg"} className="" height={24} width={24} alt="email icon" />
                       <p className="text-[#fdfdfd]">Copyright <b><a className="hover:underline" target="blank"href="https://snougle.no">Snøugle AS</a></b> 2025</p>
                     </div>
                     <div className="flex flex-row gap-1 justify-start">
