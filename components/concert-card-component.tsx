@@ -35,7 +35,9 @@ export default function ConcertCard({venue, location, datetime, ticketUrl}: Conc
               <p>{location}</p>
             </div>
         <div className='flex items-center justify-end '>
-          <a href={ticketUrl ? ticketUrl : `/` } target='_blank' className="bg-blue-main flex items-center gap-3 lg:max-w-[176px] justify-center text-white px-6  h-14 font-sec hover:bg-blue-hover">Billetter</a></div>
+          {ticketUrl ? <a href={ticketUrl} target='_blank' className="bg-blue-main flex items-center gap-3 lg:max-w-[176px] justify-center text-white px-6  h-14 font-sec hover:bg-blue-hover">Billetter</a>
+          :<p className="flex items-center gap-3 min-w-[119px] lg:max-w-[176px] justify-center text-blue-main  px-6  h-14 font-sec ">Gratis</p> }
+          </div>
       </div>
     </div>
   )
