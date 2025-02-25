@@ -1,11 +1,9 @@
-import { getBio, getConcerts, getMerch } from "@/sanity/sanity-utils";
+import { getBio, getMerch } from "@/sanity/sanity-utils";
 import Link from "next/link";
 import HamburgerMenu from "@/components/hamburger-menu";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import MerchCard from "@/components/merch-card";
-import ConcertCard from "@/components/concert-card-component";
-import ConcertCardMobile from "@/components/concert-card-mobile-component";
 import MerchCardMobile from "@/components/merch-card-mobile";
 import { ContactForm } from "@/components/contact-form";
 import { Suspense } from "react";
