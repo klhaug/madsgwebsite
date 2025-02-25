@@ -10,13 +10,13 @@ import MerchCardMobile from "@/components/merch-card-mobile";
 import { ContactForm } from "@/components/contact-form";
 import { Suspense } from "react";
 import { ImageSkeleton } from "./ui/skeletons";
+import ConcertCardList from "@/components/concert-card-list";
 
 
 export default async function Home() {
 
   const bio = await getBio();
   const merch = await getMerch();
-  const concerts = await getConcerts();
 
   return (
     <div>
@@ -91,22 +91,7 @@ export default async function Home() {
             <div className="px-5 py-12 md:px-24 ">
               <h2 id="concerts" className="text-[40px] text-center md:text-[64px] md:text-left">Konserter</h2>
               <hr/>
-              <div className="hidden lg:flex flex-col py-8">
-                {concerts.length > 0 ? concerts.map((concert) =>{
-                  const {_id, venue, location, ticketUrl, datetime} = concert;
-                  return(
-                    <ConcertCard key={_id} venue={venue} location={location} ticketUrl={ticketUrl} datetime={datetime} />
-                  )
-                }): <p>Det er ingen kommende konserter for øyeblikket.</p>}
-              </div>
-              <div className="lg:hidden flex flex-col gap-12 py-11">
-                {concerts.length > 0 ? concerts.map((concert) =>{
-                  const {_id, venue, location, ticketUrl, datetime} = concert;
-                  return(
-                    <ConcertCardMobile key={_id} venue={venue} location={location} ticketUrl={ticketUrl} datetime={datetime}  />
-                  )
-                }) : <p className="text-center">Det er ingen kommende konserter for øyeblikket.</p>}
-              </div>
+             <ConcertCardList />
             </div>
         </section>
 {/* Contact         */}
