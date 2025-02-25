@@ -32,7 +32,7 @@ export default function ConcertCardMobile({venue, location, datetime, ticketUrl}
                 <p>{day} - {hours}:{minutes}</p>
             </div>
         <div className='col-span-2 '>
-          <a href={ticketUrl} target='_blank' className="bg-blue-main flex items-center gap-3 mt-4 justify-center text-white px-6 h-11 font-sec hover:bg-blue-hover">Billetter</a></div>
+          <a href={ticketUrl ? ticketUrl : "/"} target='_blank' className="bg-blue-main flex items-center gap-3 mt-4 justify-center text-white px-6 h-11 font-sec hover:bg-blue-hover">Billetter</a></div>
       </div>
     </div>
   )
