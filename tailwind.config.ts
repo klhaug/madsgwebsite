@@ -10,6 +10,7 @@ export default {
     extend: {
       backgroundImage: {
         image: "url('/static/bg-hero-min-66.webp')",
+        mobileImage: "url('/static/bg-hero-min-66-mobile.webp')",
         burger: "url('/static/hamburger-bg.png')",
       },
       fontFamily: {

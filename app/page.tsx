@@ -19,7 +19,7 @@ export default async function Home() {
   return (
     <div>
 
-        <section id="hero" className="m-auto bg-no-repeat  bg-cover bg-image bg-[center_center] max-w-[3840px] xl:bg-[position:center_60%] h-[600px] xl:h-[725px] 2xl:h-[900px] ">
+        <section id="hero" className="m-auto bg-no-repeat  bg-cover bg-mobileImage sm:bg-image bg-[center_center] max-w-[3840px] xl:bg-[position:center_60%] h-[600px] xl:h-[725px] 2xl:h-[900px] ">
           <header className="flex justify-center w-full">
               <nav id="nav" className="flex max-w-[1728px] w-full justify-between px-5 sm:px-10 md:px-24 py-8">
                 <Link href="/" className="flex items-center font-main font-bold tracking-tighter h-11 text-2xl md:text-3xl">Mads Gjetmundsen</Link>
