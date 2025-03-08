@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="nn">
       <body
         className={`${ebGaramond.variable} ${montserrat.variable} ${cutiveMono.variable} lg:overflow-auto antialiased`}
       >
