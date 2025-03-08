@@ -47,7 +47,7 @@ export default async function Home() {
                   </div>
                 </div>
               <Suspense fallback={<ImageSkeleton />}>
-                <Image src={'/static/madsherocompressed.webp'} className="w-full sm:max-w-[400px]" height={400} width={400} alt='headshot mads'/>
+                <Image src={'/static/madsheroresized.webp'} className="w-full sm:max-w-[400px]" height={400} width={400} alt='headshot mads'/>
               </Suspense>
               <div className="max-w-[510px] lg:hidden leading-8">
                     <PortableText  value={bio[1].content}/>

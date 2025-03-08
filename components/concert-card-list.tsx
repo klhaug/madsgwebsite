@@ -1,5 +1,3 @@
-
-
 import { getConcerts } from "@/sanity/sanity-utils";
 import ConcertCard from "./concert-card-component";
 import ConcertCardMobile from "./concert-card-mobile-component";
