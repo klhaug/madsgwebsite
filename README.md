@@ -6,3 +6,5 @@ A simple landing page for musician Mads Gjetmundsen where he can show off merch 
 - Tailwind CSS
 - Sanity CMS
 - Deployed on Vercel
+
+If anyone sees this, feedback is appreciated!
