@@ -8,3 +8,4 @@ A simple landing page for musician Mads Gjetmundsen where he can show off merch 
 - Deployed on Vercel
 
 If anyone sees this, feedback is appreciated!
+:)
